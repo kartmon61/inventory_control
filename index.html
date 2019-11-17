@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prostock</title>
+        <script>
+            var sum;
+            function cal(n){
+                if(n==1){
+                var jego1 = parseInt(document.getElementById('jego1').value);
+                var jego2 = parseInt(document.getElementById('jego2').value);
+                var jego = jego1+jego2;
+                
+                var lid = parseInt(document.getElementById('lid').value);
+                var huyong = parseInt(document.getElementById('huyong').value);
+                var balju = parseInt(document.getElementById('balju').value);
+                var ju1 = parseInt(document.getElementById('1gibon').value);
+                var ju2 = parseInt(document.getElementById('2gibon').value);
+                var ju3 = parseInt(document.getElementById('3gibon').value);
+                var ju4 = parseInt(document.getElementById('4gibon').value);
+                var ju5 = parseInt(document.getElementById('5gibon').value);
+                var ju6 = parseInt(document.getElementById('6gibon').value);
+                var e = document.getElementById('e');
+                var a = document.getElementById('a');
+                var b = document.getElementById('b')
+                var e1 = document.getElementById('e1');
+                var a1 = document.getElementById('a1');
+                var b1 = document.getElementById('b1');
+                
+                console.log(jego);
+                var juganpyong = (ju1+ju2+ju3+ju4+ju5+ju6)/6;
+                console.log(juganpyong);
+                var yungansuyo = juganpyong*52;
+                console.log(yungansuyo);
+                var danwijego;
+
+                if(jego < 15000){
+                    danwijego = 16800/jego;
+                }
+
+                else{
+                    danwijego = 49000/jego;
+                }
+
+                console.log(danwijego);
+                var x = Math.pow(ju1-juganpyong,2)+Math.pow(ju2-juganpyong,2)+Math.pow(ju3-juganpyong,2)+Math.pow(ju4-juganpyong,2)+Math.pow(ju5-juganpyong,2)+Math.pow(ju6-juganpyong,2);
+
+                console.log(x);
+                var pyojun = Math.sqrt(x/6);
+                console.log(pyojun);
+                var eoq = Math.sqrt(2*juganpyong*balju/danwijego);
+
+                var anjyun = pyojun * huyong;
+                var baljujom = juganpyong * lid + anjyun;
+                e.value = eoq;
+                a.value = anjyun;
+                b.value = baljujom;
+
+                }
+                
+                if(n == 2){
+                var jego1 = parseInt(document.getElementById('jego1').value);
+                var jego2 = parseInt(document.getElementById('jego2').value);
+                var jego = jego1+jego2;
+                
+                var lid = parseInt(document.getElementById('lid2').value);
+                var huyong = parseInt(document.getElementById('huyong2').value);
+                var balju = parseInt(document.getElementById('balju2').value);
+                var ju1 = parseInt(document.getElementById('1gibon1').value);
+                var ju2 = parseInt(document.getElementById('2gibon1').value);
+                var ju3 = parseInt(document.getElementById('3gibon1').value);
+                var ju4 = parseInt(document.getElementById('4gibon1').value);
+                var ju5 = parseInt(document.getElementById('5gibon1').value);
+                var ju6 = parseInt(document.getElementById('6gibon1').value);
+                var e = document.getElementById('e');
+                var a = document.getElementById('a');
+                var b = document.getElementById('b')
+                var e1 = document.getElementById('e1');
+                var a1 = document.getElementById('a1');
+                var b1 = document.getElementById('b1');
+                
+                console.log(jego);
+                var juganpyong = (ju1+ju2+ju3+ju4+ju5+ju6)/6;
+                console.log(juganpyong);
+                var yungansuyo = juganpyong*52;
+                console.log(yungansuyo);
+                var danwijego;
+
+                if(jego < 15000){
+                    danwijego = 16800/jego;
+                }
+
+                else{
+                    danwijego = 49000/jego;
+                }
+
+                console.log(danwijego);
+                var x = Math.pow(ju1-juganpyong,2)+Math.pow(ju2-juganpyong,2)+Math.pow(ju3-juganpyong,2)+Math.pow(ju4-juganpyong,2)+Math.pow(ju5-juganpyong,2)+Math.pow(ju6-juganpyong,2);
+
+                console.log(x);
+                var pyojun = Math.sqrt(x/6);
+                console.log(pyojun);
+                var eoq = Math.sqrt(2*juganpyong*balju/danwijego);
+
+                var anjyun = pyojun * huyong;
+                var baljujom = juganpyong * lid + anjyun;
+
+                    e1.value = eoq;
+                    a1.value = anjyun;
+                    b1.value = baljujom;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <form>
+                        <table border="1">
+                            <tr>
+                                <td>
+                                    재고량
+                                </td>
+                                <td>
+                                    <input type="text" id="jego1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    리드타임
+                                </td>
+                                <td>
+                                    <input type="text" id="lid">
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        허용품절률
+                                    </td>
+                                    <td>
+                                        <input type="text" id="huyong">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        발주비용
+                                    </td>
+                                    <td>
+                                        <input type="text" id="balju">
+                                    </td>
+                                </tr>
+                        </table>
+                    <table border="1">
+                        <thead>
+                            <tr><th>주차(판매량)</th><th>기본</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1주차
+                                </td>
+                                <td>
+                                    <input type="number" id="1gibon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2주차
+                                </td>
+                                <td>
+                                    <input type="number" id="2gibon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3주차
+                                </td>
+                                <td>
+                                    <input type="number" id="3gibon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4주차
+                                </td>
+                                <td>
+                                    <input type="number" id="4gibon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    5주차
+                                </td>
+                                <td>
+                                    <input type="number" id="5gibon">
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                        6주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="6gibon">
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <input type="button" value="계산하기" onclick="cal(1)">
+  
+                    <hr>
+                </form>
+                EOQ<input type="text" id="e">
+                <br>
+                안전<input type="text" id="a">
+                <br>
+                발주점<input type="text" id="b">     
+                    
+            </td>
+            <td>
+                <form>
+                        <table border="1">
+                                <tr>
+                                    <td>
+                                        재고량
+                                    </td>
+                                    <td>
+                                        <input type="text" id="jego2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        리드타임
+                                    </td>
+                                    <td>
+                                        <input type="text" id="lid2">
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            허용품절률
+                                        </td>
+                                        <td>
+                                            <input type="text" id="huyong2">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            발주비용
+                                        </td>
+                                        <td>
+                                            <input type="text" id="balju2">
+                                        </td>
+                                    </tr>
+                            </table>
+                    <table border="1">
+                            <thead>
+                                <tr><th>주차(판매량)</th><th>저마찰</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        1주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="1gibon1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="2gibon1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        3주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="3gibon1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        4주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="4gibon1">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        5주차
+                                    </td>
+                                    <td>
+                                        <input type="number" id="5gibon1">
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td>
+                                            6주차
+                                        </td>
+                                        <td>
+                                            <input type="number" id="6gibon1">
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    <hr>
+                    <input type="button" value="계산하기" onclick="cal(2)">
+                </form>
+                <hr>
+                EOQ<input type="text" id="e1">
+                <br>
+                안전<input type="text" id="a1">
+                <br>
+                발주점<input type="text" id="b1">       
+
+            </td>
+        </tr>
+
+        </table>
+    </body>
+</html>
